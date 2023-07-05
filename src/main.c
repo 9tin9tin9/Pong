@@ -45,7 +45,9 @@ int main() {
         }
     }
 
-    Game_del(&game);
+    if (game.init) {
+        Game_del(&game);
+    }
     UI_del(&ui);
 
     DetachAudioMixedProcessor(processHitSound);

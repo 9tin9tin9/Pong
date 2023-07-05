@@ -76,6 +76,7 @@ void Game_del(Game* game) {
     if (!game->init) {
         return;
     }
+    game->init = false;
     UnloadSound(game->ball.hitsound);
     free(game->players[0]);
     free(game->players[1]);
